@@ -67,7 +67,8 @@ headComponents.push(
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
-  />
+  />,
+  <script src="//assets.adobedtm.com/e6bd1902389a/8402747c14e6/launch-5866f09dad36-development.min.js" async></script>
 );
 
 exports.onRenderBody = ({ setHeadComponents }) => {
