@@ -1,11 +1,11 @@
 {
   "root": true,
   "project": {
-    "name": "PROJECT_NAME"
+    "name": "tag-test-v3"
   },
   "api": {
-    "projectId": "PROJECT_ID",
-    "dataset": "DATASET_ID"
+    "projectId": "svuxz6zz",
+    "dataset": "production"
   },
   "plugins": [
     "@sanity/base",
