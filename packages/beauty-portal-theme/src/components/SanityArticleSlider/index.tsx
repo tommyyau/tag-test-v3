@@ -24,7 +24,6 @@ const SanityArticleSlider: FunctionComponent<SanityArticleSliderInterface> = ({
   // @todo we should take presentationType from props;
   const getComponentName = (sliderType: string) => {
     sliderType = slideType.name.toLowerCase();
-    console.log(sliderType);
     if (sliderType.indexOf('hero') >= 0) return 'hero';
     if (sliderType.indexOf('stacker') >= 0) return 'stacker';
     if (sliderType.indexOf('tile') >= 0) return 'tile';

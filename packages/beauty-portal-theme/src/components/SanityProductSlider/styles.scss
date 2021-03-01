@@ -1,11 +1,18 @@
 .bp-productSlider {
+  &.stacker {
+    .bp-container {
+      @media (min-width: 768px) {
+        padding: 0;
+      }
+    }
+  }
 
   .bp-container {
     padding: 20px;
     background: white;
 
     @media (min-width: 768px) {
-      padding: 40px 100px;
+      padding: 40px 70px;
     }
   }
 }

@@ -1,6 +1,6 @@
 .bp-tileStacker {
   flex-grow: 1;
-  padding: 20px;
+  padding: 0;
   position: relative;
 
   @media (min-width: 768px) {
@@ -9,7 +9,6 @@
 
   &_item {
     position: relative;
-    margin-bottom: 40px;
   }
 
   &_link {
@@ -31,7 +30,6 @@
     margin: 0;
     padding: 16px;
     background-color: white;
-    text-align: center;
 
     @media (min-width: 768px) {
       font-size: 1.125rem;

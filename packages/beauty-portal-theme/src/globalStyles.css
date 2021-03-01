@@ -164,6 +164,10 @@ figure img {
   max-width: 33.333333%;
   flex-basis: 33.333333%;
 }
+.col-xs-6 {
+  max-width: 50%;
+  flex-basis: 50%;
+}
 @media (min-width: 600px) {
   .col-1 {
     max-width: 8.333333%;
@@ -178,8 +182,8 @@ figure img {
     flex-basis: 33.333333%;
   }
   .col-6 {
-    max-width: 46%;
-    flex-basis: 46%;
+    max-width: 50%;
+    flex-basis: 50%;
   }
   .col-7 {
     max-width: 58.333333%;
