@@ -1,0 +1,21 @@
+.add-to-basket {
+  display: inline;
+  margin-right: 0.9375rem;
+  @media (min-width: 768px){
+    margin-right: 1.25rem;
+  }
+}
+
+#cwMainDivContainer {
+  top: 10% !important;
+  position: fixed !important;
+  max-height: 31.25rem;
+  overflow: scroll; 
+}
+
+@media (max-width:575px){
+  .cw_gride_widget table td:nth-child(3), .cw_gride_widget table th:nth-child(3){display: block !important;}
+  .cw_gride_widget table td:nth-child(3), .cw_gride_widget table th:nth-child(3) {
+    width: auto !important;
+  }
+}

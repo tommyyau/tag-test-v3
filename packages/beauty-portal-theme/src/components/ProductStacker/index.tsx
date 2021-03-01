@@ -1,9 +1,8 @@
 import React, { FunctionComponent } from 'react';
-import { Link } from 'gatsby';
 import { TileStackerInterface } from './models';
 import { urlFor } from '../../helpers/imageUrl';
 import { useInView } from 'react-intersection-observer';
-import { ReactComponent as PlayVideo } from '../../images/icons/play.svg';
+import CartWire from '../CartWire';
 import './styles.scss';
 
 const ProductStacker: FunctionComponent<TileStackerInterface> = ({
@@ -69,7 +68,8 @@ const ProductStacker: FunctionComponent<TileStackerInterface> = ({
             </div>
 
             <h3 className="bp-tileStacker_headline">
-              <span>{slide.name}</span>
+              <p>{slide.name}</p>
+              <CartWire smartProductId="794e3c66ea93215ff4a4f6258e7ed38c" />
             </h3>
           </div>
         </div>
