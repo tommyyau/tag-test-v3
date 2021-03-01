@@ -33,6 +33,8 @@ body {
   line-height: 1.6;
   letter-spacing: 0;
   background-color: #fff;
+  background: url(https://imgcdn.shortlyst.com/?u=https%3A%2F%2Fimg.shortlyst.com%2Fcanvas%2FCANVAS_1563273632294_1237_Sunsilk_VolumeandBounce_Jun2019_sunsilkBG.png)
+    0px 0px / cover no-repeat fixed;
 }
 
 a {
@@ -114,10 +116,12 @@ figure img {
   margin-right: auto;
   padding-left: 10px;
   padding-right: 10px;
+  background-color: white;
 }
 @media (min-width: 1200px) {
   .bp-container {
-    max-width: 1160px;
+    max-width: 740px;
+    overflow: hidden;
   }
 }
 .mb20 {
@@ -174,8 +178,8 @@ figure img {
     flex-basis: 33.333333%;
   }
   .col-6 {
-    max-width: 50%;
-    flex-basis: 50%;
+    max-width: 46%;
+    flex-basis: 46%;
   }
   .col-7 {
     max-width: 58.333333%;

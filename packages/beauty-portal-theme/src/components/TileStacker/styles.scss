@@ -1,12 +1,18 @@
 .bp-tileStacker {
   flex-grow: 1;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px;
   position: relative;
 
   @media (min-width: 768px) {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 30px;
+  }
+
+  .col-container {
+    margin: 0 -10px;
+  }
+
+  .col-6 {
+    margin: 0 10px 20px;
   }
 
   &_item {
@@ -15,20 +21,6 @@
 
   &_link {
     display: block;
-
-    &:hover {
-      h3>span {
-        background-image: linear-gradient(120deg, #b8f0c0 0%, #b8f0c0 100%);
-      }
-
-      .icon:before {
-        transform: scaleX(1);
-      }
-
-      picture img {
-        transform: scale(1.2);
-      }
-    }
   }
 
   &_image {
@@ -61,6 +53,7 @@
   }
 
   &_type {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;

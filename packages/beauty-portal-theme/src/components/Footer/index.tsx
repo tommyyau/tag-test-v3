@@ -15,9 +15,10 @@ const Footer: FunctionComponent = () => {
             name
             path
             externalLink
-            landingPage{
-              slug
-              {current}
+            landingPage {
+              slug {
+                current
+              }
             }
           }
         }
@@ -48,7 +49,12 @@ const Footer: FunctionComponent = () => {
         <ul className="bp-footer_items">
           {data.sanityNavBar.navItems.map(
             (navItem: {
-              navL1: { name: string; path: string; externalLink: string, landingPage: any  };
+              navL1: {
+                name: string;
+                path: string;
+                externalLink: string;
+                landingPage: any;
+              };
             }) => (
               <li className="bp-footer_item" key={navItem.navL1.name}>
                 <a
@@ -74,7 +80,7 @@ const Footer: FunctionComponent = () => {
         {/* <UnileverLogo /> */}
         <p>Copyright &copy; {new Date().getFullYear()} Unilever.</p>
       </div>
-      <BackToTop />
+      {/* <BackToTop /> */}
     </footer>
   );
 };

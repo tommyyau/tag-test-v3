@@ -32,7 +32,7 @@ const Header: FunctionComponent = () => {
             label={'Subscribe to our newsletter'}
             links={data.brandInfo}
           /> */}
-          <SiteSearch />
+          {/* <SiteSearch /> */}
         </div>
       </div>
     </header>

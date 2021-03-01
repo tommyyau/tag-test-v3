@@ -16,68 +16,64 @@ const TileStacker: FunctionComponent<TileStackerInterface> = ({
   });
   const renderer = slide => {
     return (
-      <div className="col-container">
-        <div className="col col-4">
-          <div ref={ref} data-inview={inView} key={slide.headline}>
-            <div className="bp-tileStacker-item">
-              <span className="bp-tileStacker_type">{slide._type}</span>
-              <Link className="bp-tileStacker_link" to={slide.path}>
-                <div className="bp-tileStacker_image">
-                  <figure>
-                    {inView ? (
-                      <picture
-                        className="bp-image__placeholder"
-                        style={{
-                          paddingTop: '100%',
-                          background: `url(${slide._rawHeroImage.asset.metadata.lqip})`,
-                          backgroundSize: 'cover',
-                        }}
-                      >
-                        <source
-                          media="screen and (min-width: 560px)"
-                          srcSet={`${urlFor(slide._rawHeroImage)
-                            .width(280)
-                            .height(280)
-                            .fit('max')
-                            .auto('format')
-                            .url()
-                            .toString()}`}
-                        />
-                        <source
-                          media="screen and (min-width: 320px)"
-                          srcSet={`${urlFor(slide._rawHeroImage)
-                            .width(160)
-                            .height(160)
-                            .fit('max')
-                            .auto('format')
-                            .url()
-                            .toString()}`}
-                        />
-                        <img
-                          className="bp-slider_image"
-                          src={urlFor(slide._rawHeroImage)
-                            .width(280)
-                            .height(280)
-                            .fit('max')
-                            .url()}
-                          alt={slide.heroImage.alt}
-                        />
-                      </picture>
-                    ) : null}
-                  </figure>
-                  {slide.heroVideo && (
-                    <span className="icon-play">
-                      <PlayVideo />
-                      <span hidden>Play Video</span>
-                    </span>
-                  )}
-                </div>
-
-                <h3 className="bp-tileStacker_headline">
-                  <span>{slide.headline}</span>
-                </h3>
-              </Link>
+      <div className="col col-6">
+        <div ref={ref} data-inview={inView} key={slide.headline}>
+          <div className="bp-tileStacker-item">
+            <span className="bp-tileStacker_type">{slide._type}</span>
+            <div className="bp-tileStacker_image">
+              <figure>
+                {inView ? (
+                  <picture
+                    className="bp-image__placeholder"
+                    style={{
+                      paddingTop: '100%',
+                      background: `url(${slide._rawHeroImage.asset.metadata.lqip})`,
+                      backgroundSize: 'cover',
+                    }}
+                  >
+                    <source
+                      media="screen and (min-width: 560px)"
+                      srcSet={`${urlFor(slide._rawHeroImage)
+                        .width(280)
+                        .height(280)
+                        .fit('max')
+                        .auto('format')
+                        .url()
+                        .toString()}`}
+                    />
+                    <source
+                      media="screen and (min-width: 320px)"
+                      srcSet={`${urlFor(slide._rawHeroImage)
+                        .width(160)
+                        .height(160)
+                        .fit('max')
+                        .auto('format')
+                        .url()
+                        .toString()}`}
+                    />
+                    <img
+                      className="bp-slider_image"
+                      src={urlFor(slide._rawHeroImage)
+                        .width(280)
+                        .height(280)
+                        .fit('max')
+                        .url()}
+                      alt={slide.heroImage.alt}
+                    />
+                  </picture>
+                ) : null}
+              </figure>
+              {slide.heroVideo && (
+                <span className="icon-play">
+                  <PlayVideo />
+                  <span hidden>Play Video</span>
+                </span>
+              )}
             </div>
+
+            <h3 className="bp-tileStacker_headline">
+              <span>{slide.headline}</span>
+            </h3>
           </div>
         </div>
       </div>
@@ -89,7 +85,11 @@ const TileStacker: FunctionComponent<TileStackerInterface> = ({
       <div className="bp-tileStacker_header">
         <h2 className="bp-tileStacker_title">{headline}</h2>
       </div>
-      <div className="col col-3">{slides.map(slide => renderer(slide))}</div>
+      <div className="col">
+        <div className="col-container">
+          {slides.map(slide => renderer(slide))}
+        </div>
+      </div>
     </div>
   );
 };

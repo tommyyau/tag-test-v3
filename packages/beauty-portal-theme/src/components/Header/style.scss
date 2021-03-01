@@ -10,16 +10,19 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--primary-color, #ff5c85);
-  background-color: var(--black-color, black);
+  // background-color: var(--black-color, black);
+  background-color: #E61B72;
+
+  color: white;
+
+  .bp-container {
+    background-color: transparent
+  }
 
   &_content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    @media (min-width: 768px) {
-      justify-content: flex-start;
-    }
   }
 
   .bp-logo {
@@ -32,11 +35,7 @@
       align-items: center;
       font-size: 1.6rem;
       font-weight: 500;
-      color: var(--primary-color, #ff5c85);
-
-      & span {
-        color: #b8f0c0,
-      }
+      color: white;
     }
   }
 

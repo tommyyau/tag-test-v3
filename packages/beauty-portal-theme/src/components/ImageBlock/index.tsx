@@ -35,7 +35,7 @@ const ImageBlock: FunctionComponent<ImageBlockInterface> = ({
             as="image"
             href={`${urlFor(_rawImage)
               .width(559)
-              .height(314)
+
               .quality(80)
               .fit('max')
               .auto('format')
@@ -45,7 +45,7 @@ const ImageBlock: FunctionComponent<ImageBlockInterface> = ({
           <picture
             className="bp-image__placeholder"
             style={{
-              paddingTop: `56.25%`,
+              paddingTop: `calc(100% / ${_rawImage.asset.metadata.dimensions.aspectRatio})`,
               background: `url(${_rawImage.asset.metadata.lqip})`,
               backgroundSize: 'cover',
             }}
@@ -53,8 +53,7 @@ const ImageBlock: FunctionComponent<ImageBlockInterface> = ({
             <source
               media="screen and (min-width: 560px)"
               srcSet={`${urlFor(_rawImage)
-                .width(752)
-                .height(422)
+                .width(720)
                 .quality(80)
                 .fit('crop')
                 .auto('format')
@@ -65,7 +64,6 @@ const ImageBlock: FunctionComponent<ImageBlockInterface> = ({
               media="screen and (min-width: 320px)"
               srcSet={`${urlFor(_rawImage)
                 .width(559)
-                .height(314)
                 .quality(80)
                 .fit('max')
                 .auto('format')
@@ -74,8 +72,7 @@ const ImageBlock: FunctionComponent<ImageBlockInterface> = ({
             />
             <img
               src={urlFor(_rawImage)
-                .width(752)
-                .height(422)
+                .width(720)
                 .fit('crop')
                 .auto('format')
                 .quality(80)

@@ -1,7 +1,11 @@
 .bp-productSlider {
-  padding: 0 0 20px;
 
-  @media (min-width: 768px) {
-    padding: 40px 0;
+  .bp-container {
+    padding: 20px;
+    background: white;
+
+    @media (min-width: 768px) {
+      padding: 40px 100px;
+    }
   }
 }
